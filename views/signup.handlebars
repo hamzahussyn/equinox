@@ -1,0 +1,79 @@
+<body>
+  <script src="/javascript/signup.js"></script>
+  <div class="card d-flex justify-content-center" style="width: 30rem;">
+    {{!-- <img class="card-img-top" src="http://localhost:3000/images/logo.png" alt="Card image cap"> --}}
+    <div class="card">
+      <div class="card-header text-center">
+        Greetings!
+      </div>
+      <div class="card-body">
+        <h5 class="card-title text-center">Signup</h5>
+        <p class="card-text text-center">Create an account to experience the best of equinox</p>
+
+        <div class="text-right">
+          <form method="POST" onsubmit="return(validate())">
+            <div class="form-group">
+              <br>
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="Enter email" name="email" required="true" value="{{#if email}}{{email}}{{/if}}">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <small class="text-danger">{{emailError}}</small>
+
+            <br>
+            <div class="form-group">
+              <label for="username">Username</label>
+              <input class="form-control" id="username" aria-describedby="emailHelp"
+                placeholder="Enter Username" name="username" required="true" value="{{#if username}}{{username}}{{/if}}">
+            </div>
+            <small class="text-danger">{{userNameError}}</small>
+            <br>
+
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input class="form-control" id="name" aria-describedby="emailHelp"
+                placeholder="Enter Name" name="name" required="true" value="{{#if name}}{{name}}{{/if}}">
+            </div>
+            <small class="text-danger">{{userNameError}}</small>
+            <br>
+
+            <div class="form-group">
+              <label>Role</label>
+              <select class="form-control" required="true" name="role">
+                <option>None</option>
+                <option>Student</option>
+                <option>Instructor</option>
+                <option>Professional</option>
+                <option>Hobbyist</option>
+              </select>
+              <small class="form-text text-muted">Choose the role which describes you the best.</small>
+            </div>
+            <br>
+
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="password" placeholder="Password"
+                name="password" required="true" "{{#if password}}{{password}}{{/if}}">
+              <small class="text-danger" id="passwordError"></small>
+            </div>
+            <br>
+
+            <div class="form-group">
+              <label for="confirmPassword">Confirm Password</label>
+              <input type="password" class="form-control" id="confirmPassword" placeholder="Password"
+                name="confirmPasssword" required="true" input="{{#if confirmPassword}}{{confirmPassword}}{{/if}}">
+              <small class="text-danger" id="confirmPasswordError"></small>
+            </div>
+            <br>
+
+            <button id="submit" type="submit" class="btn btn-primary" style="background-color: #3895D3;">Submit</button>
+          </form>
+        </div>
+      </div>
+      <div class="card-footer text-muted">
+        Join the most versatile AI based platform
+      </div>
+    </div>
+  </div>
+</body>

@@ -1,0 +1,40 @@
+<body class="flex-column align-items-center">
+  <div style="margin-left: 100px; margin-right: 100px; margin-bottom: 120px">
+    <div class="card text-center" style="width: 50rem;">
+      <div class="card-header">
+        Equinox Profile
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">{{name}}</h5>
+        <p class="card-text">This equinox user works as a <i>{{profession}}</i></p>
+        <span><strong>Email: </strong>
+          <p>{{email}}</p>
+        </span>
+      </div>
+      <div class="card-footer text-muted">
+        Has earned {{count}} tokens so far.
+      </div>
+
+    </div>
+
+    <div>
+      {{#each tokens}}
+      <div class="card border-info mb-2 mt-1" style="width: 50rem;">
+        <div class="card-header">Unlocked Token</div>
+        <div class="card-body">
+          <span>
+            <h5 class="card-title">{{@key}}</h5>
+            <p class="card-text">Collected tokens: <b>{{this}}</b></p>
+          </span>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+
+    <br><br>
+    <small>Equinox profiles are like your virtual resumes, where you can showcase your skills in terms of earned tokens by
+     Equinox. <br>Feel free to share this url on your Linkedin, Github, or anyother portfolio page.</small>
+
+   
+  </div>
+</body>

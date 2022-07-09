@@ -1,0 +1,38 @@
+<body>
+  <div class="card d-flex justify-content-center" style="width: 30rem;">
+    {{!-- <img class="card-img-top" src="http://localhost:3000/images/logo.png" alt="Card image cap"> --}}
+    <div class="card">
+      <div class="card-header text-center">
+        Welcome Back!
+      </div>
+      <div class="card-body">
+        <h5 class="card-title text-center">Login</h5>
+        <p class="card-text text-center">Login to your account to experience the best of equinox</p>
+
+        <div class="text-right">
+          <form method="POST">
+            <div class="form-group">
+              <br>
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="Enter email" name="email" required="true" value="{{#if email}}{{email}}{{/if}}">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <br>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"
+                name="password" required="true">
+            </div>
+            <br>
+            <button type="submit" class="btn btn-primary" style="background-color: #3895D3;">Submit</button>
+            <small class="text-danger">{{loginError}}</small>
+          </form>
+        </div>
+      </div>
+      <div class="card-footer text-muted ">
+        New to Equinox? <a href="signup" class="text-decoration-none">Join Now</a>
+      </div>
+    </div>
+  </div>
+</body>
